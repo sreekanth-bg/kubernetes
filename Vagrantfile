@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
   # Kubernetes Worker Nodes
   (1..NodeCount).each do |i|
     config.vm.define "kworker#{i}" do |workernode|
-      workernode.vm.box = "centos/7"
+      workernode.vm.box = "ubuntu/xenial64"
       workernode.vm.hostname = "kworker#{i}.example.com"
       workernode.vm.network "private_network", ip: "172.42.42.10#{i}"
       workernode.vm.provider "virtualbox" do |v|
