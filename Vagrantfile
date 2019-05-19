@@ -18,7 +18,7 @@ Vagrant.configure(2) do |config|
     kmaster.vm.provision "shell", path: "bootstrap_kmaster.sh"
   end
   
-  NodeCount = 2
+  NodeCount = 1
 
   # Kubernetes Worker Nodes
   (1..NodeCount).each do |i|
